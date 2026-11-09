@@ -22,8 +22,9 @@ code on their phone. Scripts: `scripts/codex_login.py` (sign-in) and `scripts/co
    their ChatGPT quota) and that they should continue only because they asked for it. Give the code exactly.
 3. `python3 <skill_dir>/scripts/codex_login.py wait`, which returns `LOGGED_IN: Logged in using ChatGPT` once they approved.
    If it times out, run `start` again for a fresh code.
-4. Never print, copy or commit `~/.codex/auth.json` (it is the login). In a cloud session the login lasts until the
-   container is reset; in a new session, sign in again the same way.
+4. Never print, copy or commit `~/.codex/auth.json` (it is the login). In a cloud session the login lasts for the
+   whole session, and every new cloud session needs a new code (same steps). Locally the login is saved on the
+   computer and carries over between sessions, so check `codex_login.py status` first.
 5. "No image generation tool" on the first image means the account has no paid plan: `codex logout`, ask the user to
    sign out on chatgpt.com, and run `start` again with the right account. (`codex` then `/status` shows the plan.)
 

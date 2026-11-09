@@ -8,7 +8,8 @@
 
 The user opens https://auth.openai.com/codex/device on any device (a phone is fine), signs in with the ChatGPT
 account that has the paid plan, and types the code. The code expires in 15 minutes. The login is stored in
-~/.codex/auth.json on THIS machine (in a cloud session: until the container is reset). Never print that file.
+~/.codex/auth.json on THIS machine: in the cloud it lasts for the session (a new cloud session needs a new code);
+locally it carries over between sessions. Never print that file.
 """
 import os, re, shutil, subprocess, sys, time
 from pathlib import Path

@@ -54,7 +54,7 @@ What happens:
 
 > Only type a code you asked for yourself. Codex shows the same warning: if a website or another person gave you the code, cancel.
 
-In a cloud session the sign-in lasts until the session's container is reset. Next time, Claude asks for a new code the same way.
+**How long the sign-in lasts:** in the cloud it stays for the whole session; each new cloud session needs a new code (Claude asks for it the same way). On your own computer it stays signed in across sessions, because it is saved on the computer.
 
 ## 3. Same character, new scene (reference images)
 > Use the fox image as a reference: the same fox, now reading a book by a rainy window.
@@ -85,7 +85,7 @@ and an image that uses another image of the batch as a reference waits for it.
 | "no image generation tool" / no image | the account has no paid plan. Claude runs `codex logout`, you sign out on chatgpt.com, then sign in again with the right account |
 | The result is "someone else" | the references weren't used. Ask for a stronger Codex model with medium effort; keep the "Image 1: …" lines |
 | "usage limit has been reached" | wait for the reset time. Finished images are skipped on rerun |
-| Asked for a code again in a new session | expected in the cloud: the sign-in lives in that session's container |
+| Asked for a code again in a new session | expected in the cloud: every new cloud session signs in once. On your own computer the sign-in carries over between sessions |
 | Disk filling up | the script deletes Codex's image copies; Claude can also clean `~/.codex/generated_images` |
 
 ### Running it yourself (optional)
@@ -138,7 +138,7 @@ MIT. See [LICENSE](LICENSE).
 3. בטלפון: פותחים את הכתובת, נכנסים עם החשבון שיש בו מנוי, מקלידים את הקוד ומאשרים.
 4. קלוד רואה שההתחברות הצליחה, ואחרי 40 עד 80 שניות התמונה בצ'אט.
 
-מקלידים רק קוד שביקשתם בעצמכם. בסשן בענן ההתחברות מחזיקה עד שהסביבה מתאפסת, ובסשן חדש קלוד יבקש קוד חדש באותה דרך.
+מקלידים רק קוד שביקשתם בעצמכם. **כמה זמן ההתחברות מחזיקה:** בענן היא מחזיקה לאורך כל הסשן, ולכל סשן חדש בענן צריך קוד חדש (קלוד מבקש אותו באותה דרך). במחשב שלכם ההתחברות נשמרת במחשב ועוברת בין סשנים.
 
 ### אותה דמות בסצנה חדשה
 "תשתמש בתמונת השועל כייחוס: אותו שועל, עכשיו קורא ספר ליד חלון גשום". עד 5 תמונות ייחוס לכל תמונה. קלוד כותב את ההנחיה בשיטה שעובדת: שורה לכל תמונה, מי עומד איפה במילים, ורשימה של מה אסור לשנות.
