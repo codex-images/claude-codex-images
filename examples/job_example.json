@@ -1,0 +1,16 @@
+{
+  "job": "fox_barista",
+  "aspect": "9:16",
+  "jobs": [
+    {
+      "id": "fox_cafe",
+      "refs": [],
+      "prompt": "A friendly cartoon fox barista with a green apron and round glasses, pouring latte art behind the counter of a cozy cafe, warm morning light, stylized 3D animation look, vertical composition with empty space at the top."
+    },
+    {
+      "id": "fox_park",
+      "refs": ["results/fox_barista/fox_cafe.png"],
+      "prompt": "Image 1 is the character. Keep exactly the same fox: face, fur colour, green apron, round glasses and the rendering style of Image 1. New scene: the fox sits on a park bench in autumn, holding a paper coffee cup and smiling. Do not change the character's identity or proportions."
+    }
+  ]
+}

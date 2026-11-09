@@ -1,0 +1,5 @@
+.codex/
+auth.json
+results/
+*.log
+__pycache__/
